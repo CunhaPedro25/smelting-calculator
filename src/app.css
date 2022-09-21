@@ -2,6 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-.selected {
-  @apply bg-green-500
+.pixelated{
+  image-rendering: pixelated
+}
+
+.pixel-corners {
+  clip-path: polygon(
+    0px 6px,
+    3px 6px,
+    3px 3px,
+    6px 3px,
+    6px 0px,
+    calc(100% - 6px) 0px,
+    calc(100% - 6px) 3px,
+    calc(100% - 3px) 3px,
+    calc(100% - 3px) 6px,
+    100% 6px,
+    100% calc(100% - 6px),
+    calc(100% - 3px) calc(100% - 6px),
+    calc(100% - 3px) calc(100% - 3px),
+    calc(100% - 6px) calc(100% - 3px),
+    calc(100% - 6px) 100%,
+    6px 100%,
+    6px calc(100% - 3px),
+    3px calc(100% - 3px),
+    3px calc(100% - 6px),
+    0px calc(100% - 6px)
+  );
+}
+
+.button{
+  @apply flex justify-center items-center bg-gray-500 border border-black
+}
+
+.button .background{
+  @apply flex gap-2 h-full p-1 bg-[#6d6d6d] border-[.1rem] border-l-[#aaaaaa] border-t-[#aaaaaa] border-r-[#565656] border-b-[#565656]
+}
+
+.button:hover{
+  @apply border-[#f1f1f1]
+}
+
+.button.selected .background{
+  @apply bg-[#7b85bd] border-l-[#bdc6ff] border-t-[#bdc6ff] border-r-[#5d689f] border-b-[#5d689f]
+}
+
+.item-slot{
+  @apply relative flex justify-center items-center p-0.5 bg-[#8b8b8b] border-[.1rem] border-l-[#3f3f3f] border-t-[#3f3f3f] border-r-white border-b-white pixelated
+}
+
+.item-slot input{
+  @apply text-white bg-transparent absolute -bottom-2 -right-0.5 text-2xl appearance-none w-full
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    outline: none;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+    outline: none;
+}
+
+input{
+  text-align: right;
+  @apply text-xl
 }
