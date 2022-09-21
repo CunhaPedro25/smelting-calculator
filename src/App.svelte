@@ -43,8 +43,7 @@
 <main>
   <div class="absolute h-screen w-screen pixelated" style="background-image: url({background}); background-size: 5%;"></div>
 
-  <div class="relative flex w-screen h-screen justify-center items-center p-2">
-    
+  <div class="relative flex w-screen h-screen justify-center items-center p-2 bg-black/30">
     <div class="p-[.1rem] bg-black pixel-corners">
       <div class="flex flex-col pixel-corners p-4 gap-4 bg-[#c6c6c6] border-[.2rem] border-l-white border-t-white border-r-[#555555] border-b-[#555555]">
         <div class="flex justify-center items-center gap-1">
@@ -81,8 +80,8 @@
                 <input type="number" id="items" bind:value={nItems} on:input={calculateTime} min="0">
               </div>
             </div>
-            <div class="flex justify-center items-center pixelated h-12 w-8 p-0.5 mr-0.5">
-              <img class="h-6" src={fire} alt="fire">
+            <div class="flex justify-center items-center pixelated h-12 w-12 p-0.5 mr-1">
+              <img class="h-8" src={fire} alt="fire">
             </div>
             <div class="item-slot">
               <img class="h-12" src={coal} alt="coal">
@@ -95,10 +94,5 @@
         </div>
       </div>
     </div>
-
-
-
-    
-      
   </div>
 </main>
