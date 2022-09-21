@@ -41,7 +41,7 @@
 </script>
 
 <main>
-  <div class="absolute h-screen w-screen pixelated" style="background-image: url({background}); background-size: 5%;"></div>
+  <div class="absolute h-screen w-screen pixelated bg-[length:15%] lg:bg-[length:5%]" style="background-image: url({background});"></div>
 
   <div class="relative flex w-screen h-screen justify-center items-center p-2 bg-black/30">
     <div class="p-[.1rem] bg-black pixel-corners">
